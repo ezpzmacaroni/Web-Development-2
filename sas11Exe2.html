@@ -1,0 +1,16 @@
+Below is another example that shows the use of innerHTML for changing the URL when the button is click. <!DOCTYPE html>
+<html>
+<body><p>...</p>
+<a id="myAnchor" "a href="https://www.wikipedia.org">https://wikipedia.org</a>
+<button onclick="myFunction()">Change link...</button>
+
+<script>
+function myFunction() {
+document.getElementById("myAnchor").innerHTML = "Google";
+document.getElementById("myAnchor").innerHTML = "<a
+href='https://www.google.com'>https://www.google.com</a>";
+document.getElementById("myAnchor").target = "_blank";
+}
+</script>
+</body>
+</html>
