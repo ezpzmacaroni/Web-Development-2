@@ -1,0 +1,53 @@
+!DOCTYPE html>
+<html>
+<head>
+<title>SAS15 Bitcoin account checker</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+
+<center><h1>Sas16 Bitcoin checker</h1></center>
+<h2 id="demo1">account here </h2>
+<bold style = "color:red" id = "bitcoin">hash code here </bold>
+<i class='fab fa-bitcoin'></i>
+<i class='fab fa-bitcoin' style='font-size:24px'></i>
+<i class='fab fa-bitcoin' style='font-size:36px'></i>
+<i class='fab fa-bitcoin' style='font-size:48px;color:red'></i>
+<br>
+<bold id = "show_account" Card Holder here>..</bold>
+<p>Used on a button:</p>
+<button style='font-size:24px;color:purple' onclick = "validate1()">validate <i class='fab fa-bitcoin'></i>
+</button>
+<button style='font-size:24px;color:red' onclick = "account_name()">Payee <i class='fab fa-cc-mastercard' style='font- size:48px;color:red'></i></button>
+<p>Unicode:</p>
+<i style='font-size:24px' class='fab'>&#xf379;</i>
+
+<script>
+  function validate1(){
+var x = document.lastModified;
+document.getElementById("demo1").innerHTML = x;
+alert(x);
+}
+account_name = function(){
+var x1 = prompt("Card Holder of BitCoin:");
+var y2 = prompt("Account Number");
+document.getElementById("show_account").innerHTML = x1 + ":" + y2;
+document.getElementById("bitcoin").innerHTML = hashDataString(x1);
+}
+function hashDataString(string) {
+var hash = 0;
+if (string.length == 0) return hash;
+for (i = 0; i < string.length; i++) {
+char = string.charCodeAt(i);
+hash = ((hash << 5) - hash) + char;
+hash = hash & hash;
+}
+return hash;
+}
+
+</script>
+
+</script>
+</body>
+</html>
